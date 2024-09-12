@@ -1,0 +1,36 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Lab
+* Top Cell Name: inv
+* View Name:     schematic
+* Netlisted on:  Sep  7 15:48:43 2024
+************************************************************************
+ 
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+ 
+ 
+ 
+************************************************************************
+* Library Name: Lab
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+ 
+.SUBCKT inv gnd in out vdd
+*.PININFO in:I vdd:I out:O gnd:B
+XM0 out in gnd gnd nsvtlp w=0.7 l=0.06 nfing=1 sense=0 ngcon=1 m=1 
++ accurateFlow=0
+XM1 out in vdd vdd psvtlp w=1.65 l=0.06 sense=1 nfing=1 sense=0 ngcon=1 m=1 
++ accurateFlow=0
+.ENDS
+
