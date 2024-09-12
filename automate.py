@@ -23,14 +23,12 @@ while x <= 4:
                         lvl1 = l[i].split("=")
                         lvl2 = lvl1[1].split()
                         lvl3 = lvl1[3].split()
-                        print(lvl1)
-                        print(lvl2)
-                        print(lvl3)
                         lvl3[0] = str(x)
                         lvl2[0] = str(round(n,3))
                         lvl1[1] = " ".join(lvl2)
                         lvl1[3] = " ".join(lvl3)
                         l[i] = "=".join(lvl1)
+                        print(l[i])
                     if l[i].split() != [] and l[i].split()[0] =="XM1":
                         lvl2 = lvl1[1].split()
                         lvl2[0] = str(round(m*1.5,3))
@@ -39,6 +37,7 @@ while x <= 4:
                         lvl1[1] = " ".join(lvl2)
                         lvl1[1] = " ".join(lvl3)
                         l[i] = "=".join(lvl1)
+                        print(l[i])
                 with open("inv.src.net", "w") as f:
                     f.writelines(l)
                 p = popen(command)
